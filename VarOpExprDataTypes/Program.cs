@@ -44,18 +44,30 @@ namespace VarOpExprDataTypes
             Console.WriteLine("How many quarters?");
             double quarters = double.Parse(Console.ReadLine());
 
-            double hundredValue = 100;
-            double fiftyValue = 50;
-            double twentyValue = 20;
-            double tenValue = 10;
-            double fiveValue = 5;
-            double oneValue = 1;
-            double quartersValue = 0.25;
+            double hundredValue = 100d;
+            double fiftyValue = 50d;
+            double twentyValue = 20d;
+            double tenValue = 10d;
+            double fiveValue = 5d;
+            double oneValue = 1d;
+            double quarterValue = 0.25d;
 
+            double hundredTotal = hundredValue * hundredBill;
+            double fiftyTotal = fiftyValue * fiftyBill;
+            double twentyTotal = twentyValue * twentyBill;
+            double tenTotal = tenValue * tenBill;
+            double fiveTotal = fiveValue * fiveBill;
+            double oneTotal = oneValue * oneBill;
+            double quartersTotal = quarterValue * quarters;
+            double donationTotal = hundredTotal + fiftyTotal + twentyTotal + tenTotal + fiveTotal + oneTotal + quartersTotal;
 
-
-
-
+            Console.WriteLine("Your total donation amount is: $" + donationTotal);
+            Console.WriteLine("Please take your receipt. Thank you.");
+            Console.WriteLine("Full Name: " + donorName);
+            Console.WriteLine("Address: " + donorAddress);
+            Console.WriteLine("E-Mail: " + donorEmail);
+            Console.WriteLine("Fiscal Year: " + fiscalYear);
+            Console.WriteLine("Donation Amount: " + donationTotal);
 
 
 
