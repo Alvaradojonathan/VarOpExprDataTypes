@@ -10,64 +10,96 @@ namespace VarOpExprDataTypes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your name?");
-            string donorName = Console.ReadLine();
+            //Swimteam t-shirt fundraiser
+            //Shirt prices and taxes
+            double superSwimTPrice = 15d;
+            double beTheSharkTPrice = 17.50d;
+            double babyBubblesTPrice = 4.75d;
+            double salesTax = 0.08d;
 
-            Console.WriteLine("What is your address?");
-            string donorAddress = Console.ReadLine();
+            //Total shirts purchased
+            Console.WriteLine("How many Super Swim shirts purchased @ $15.00?");
+            double totalSuperSwimTs = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("What is your e-mail?");
-            string donorEmail = Console.ReadLine();
+            Console.WriteLine("How many Be The Shark shirts purchased @ $17.50?");
+            double totalbeTheSharkTs = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("What Fiscal year is it?");
-            string fiscalYear = Console.ReadLine();
+            Console.WriteLine("How many Baby Bubbles shirts purchased @ $4.75?");
+            double totalBabyBubblesTs = double.Parse(Console.ReadLine());
+            
+            //Number of shirts purchased
+            double totalShirts = (totalBabyBubblesTs + totalbeTheSharkTs + totalSuperSwimTs);
+            Console.WriteLine("You purchased " + totalShirts + " shirts.");
+            double subTotal = (totalBabyBubblesTs * babyBubblesTPrice) + (totalbeTheSharkTs * beTheSharkTPrice)
+                + (totalSuperSwimTs * superSwimTPrice);
+            double grandTotal = (subTotal * salesTax) + subTotal;
 
-            Console.WriteLine("What is your donation amount?");
-            Console.WriteLine("How many $100 bills?");
-            double hundredBill = double.Parse(Console.ReadLine());
+            //Subtotal
+            Console.WriteLine("Subtotal: " + subTotal);
+            Console.WriteLine("Grand Total: " + grandTotal);
 
-            Console.WriteLine("How many $50 bills?");
-            double fiftyBill = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("How many $20 bills?");
-            double twentyBill = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("How many $10 bills?");
-            double tenBill = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("How many $5 bills?");
-            double fiveBill = double.Parse(Console.ReadLine());
+            //donation practice
+            //Console.WriteLine("What is your name?");
+            //string donorName = Console.ReadLine();
 
-            Console.WriteLine("How many $1 bills?");
-            double oneBill = double.Parse(Console.ReadLine());
+            //Console.WriteLine("What is your address?");
+            //string donorAddress = Console.ReadLine();
 
-            Console.WriteLine("How many quarters?");
-            double quarters = double.Parse(Console.ReadLine());
+            //Console.WriteLine("What is your e-mail?");
+            //string donorEmail = Console.ReadLine();
 
-            double hundredValue = 100d;
-            double fiftyValue = 50d;
-            double twentyValue = 20d;
-            double tenValue = 10d;
-            double fiveValue = 5d;
-            double oneValue = 1d;
-            double quarterValue = 0.25d;
+            //Console.WriteLine("What Fiscal year is it?");
+            //string fiscalYear = Console.ReadLine();
 
-            double hundredTotal = hundredValue * hundredBill;
-            double fiftyTotal = fiftyValue * fiftyBill;
-            double twentyTotal = twentyValue * twentyBill;
-            double tenTotal = tenValue * tenBill;
-            double fiveTotal = fiveValue * fiveBill;
-            double oneTotal = oneValue * oneBill;
-            double quartersTotal = quarterValue * quarters;
-            double donationTotal = hundredTotal + fiftyTotal + twentyTotal + tenTotal + fiveTotal + oneTotal + quartersTotal;
+            //Console.WriteLine("What is your donation amount?");
+            //Console.WriteLine("How many $100 bills?");
+            //double hundredBill = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Your total donation amount is: $" + donationTotal);
-            Console.WriteLine("Please take your receipt. Thank you.");
-            Console.WriteLine("Full Name: " + donorName);
-            Console.WriteLine("Address: " + donorAddress);
-            Console.WriteLine("E-Mail: " + donorEmail);
-            Console.WriteLine("Fiscal Year: " + fiscalYear);
-            Console.WriteLine("Donation Amount: " + donationTotal);
+            //Console.WriteLine("How many $50 bills?");
+            //double fiftyBill = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("How many $20 bills?");
+            //double twentyBill = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("How many $10 bills?");
+            //double tenBill = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("How many $5 bills?");
+            //double fiveBill = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("How many $1 bills?");
+            //double oneBill = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("How many quarters?");
+            //double quarters = double.Parse(Console.ReadLine());
+
+            //double hundredValue = 100d;
+            //double fiftyValue = 50d;
+            //double twentyValue = 20d;
+            //double tenValue = 10d;
+            //double fiveValue = 5d;
+            //double oneValue = 1d;
+            //double quarterValue = 0.25d;
+
+            //double hundredTotal = hundredValue * hundredBill;
+            //double fiftyTotal = fiftyValue * fiftyBill;
+            //double twentyTotal = twentyValue * twentyBill;
+            //double tenTotal = tenValue * tenBill;
+            //double fiveTotal = fiveValue * fiveBill;
+            //double oneTotal = oneValue * oneBill;
+            //double quartersTotal = quarterValue * quarters;
+            //double donationTotal = hundredTotal + fiftyTotal + twentyTotal + tenTotal + fiveTotal + oneTotal + quartersTotal;
+
+            //Console.WriteLine("Your total donation amount is: $" + donationTotal);
+            //Console.WriteLine("Please take your receipt. Thank you.");
+            //Console.WriteLine("Full Name: " + donorName);
+            //Console.WriteLine("Address: " + donorAddress);
+            //Console.WriteLine("E-Mail: " + donorEmail);
+            //Console.WriteLine("Fiscal Year: " + fiscalYear);
+            //Console.WriteLine("Donation Amount: " + donationTotal);
 
 
 
